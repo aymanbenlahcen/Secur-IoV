@@ -1,0 +1,15 @@
+.container{
+    width:50%;
+    margin-top:1em;   
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+    margin-top:1em; 
+    }   
+
+    .button{
+        width: 20%;
+        font-size: 6pt;
+    }
+}

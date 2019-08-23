@@ -1,0 +1,54 @@
+<app-sidebar-user></app-sidebar-user>
+
+
+<div class="container-fluid">
+
+  <div id="div1">
+    <mdb-card>
+      <mdb-card-body>
+        <h6 style="font-size:50px;">Vidéo</h6>
+      </mdb-card-body>
+    </mdb-card>
+
+    <div class="wrapper">
+      <div class="two">
+          <div class=" embed-responsive-16by9 ">
+            <h3>Vidéo disponible !</h3>
+            <br>
+            <video controls="" autoplay="" name="media">
+              <source src="http://localhost:2900/video/{{groupName}}/{{vidName}}" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <div class="three">
+        <!--like-->
+      <button (click)="countLike()" type="button" mdbBtn color="primary" mdbWavesEffect><mdb-icon far icon="thumbs-up"></mdb-icon> Like </button>{{like}}
+      <!--dislike-->
+    <button (click)="countDislike()" type="button" mdbBtn color="primary" mdbWavesEffect><mdb-icon far icon="thumbs-down"></mdb-icon> Dislike </button>{{dislike}}
+        </div>
+
+
+
+<!--
+<button (click)="clickCount()">click</button>
+
+
+
+<div class="col-md-6">
+</div>
+
+  <div class="embed-responsive embed-responsive-16by9" >
+    <video  controls="" autoplay="" name="media">
+     <source src="https://www.radiantmediaplayer.com/media/bbb-360p.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vlDzYIIOYmM" allowfullscreen></iframe> -->
+
+    </div>
+
+  </div>
+</div>

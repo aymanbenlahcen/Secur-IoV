@@ -1,0 +1,185 @@
+<a [routerLink]="['/profile', '5cbade5e7096452d31550085']"></a>
+<div class="container bootstrap snippet">
+  <div class="row">
+    <div class="col-sm-10">
+      <h3>{{user.pseudo}} - Id Blockchain: {{user.account}}</h3>
+    </div>
+    <div class="col-sm-2"><a class="pull-right"></a></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <!--left col-->
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail"
+          alt="avatar">
+        <h6>Chargez une photo</h6>
+        <input type="file" class="text-center center-block file-upload">
+      </div>
+      <br>
+
+      <ul class="list-group">
+        <li class="list-group-item text-muted">Vos activités <i class="fa fa-dashboard fa-1x"></i></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Partages</strong></span> 125</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>TI</strong></span> {{user.trustIndex}}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Flux Suivis</strong></span> 78</li>
+      </ul>
+
+    </div>
+    <div class="col-sm-9">
+      <div class="tab-content">
+        <div class="tab-pane active" id="home">
+          <h1 id="h1_1">Vos informations</h1>
+          <hr>
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group">
+              <div class="col-xs-6">
+                <label for="pseudo">
+                  <h4>Pseudo</h4>
+                </label>
+                <input type="text" formControlName="pseudo" class="form-control"
+                  [ngClass]="{'is-invalid': submitted && f.pseudo.errors}" placeholder="{{user.pseudo}}">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-6">
+                <label for="name">
+                  <h4>Prénom</h4>
+                </label>
+                <input type="text" formControlName="name" class="form-control" [ngClass]="{'is-invalid': submitted && f.name.errors}"
+                  placeholder="{{user.name}}">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-6">
+                <label for="lastname">
+                  <h4>Nom</h4>
+                </label>
+                <input type="text" formControlName="lastname" class="form-control" 
+                [ngClass]="{'is-invalid': submitted && f.lastname.errors}" placeholder="{{user.lastname}}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-xs-6">
+                <label for="email">
+                  <h4>Email</h4>
+                </label>
+                <input type="email" formControlName="email" class="form-control"  placeholder="{{user.email}}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-xs-6">
+                <label for="password">
+                  <h4>Mot de passe</h4>
+                </label>
+                <input type="password" formControlName="password" class="form-control"
+                  placeholder="Entrez votre mot de passe">
+              </div>
+            </div>
+        
+            <br>
+            <h1 id="h1_2">Votre Véhicule</h1>
+            <hr>
+            <div class="form-group">
+              <div class="col-xs-6">
+                <label for="vehicle">
+                </label>
+                <span class="custom-dropdown custom-dropdown--white">
+                  <select class="custom-dropdown__select custom-dropdown__select--white" formControlName="vehicle"
+                   [ngClass]="{'is-invalid': submitted && f.vehicle.errors} ">
+                    <option selected disabled>{{user.vehicle}}</option>
+                    <option>ALFA ROMEO</option>
+                    <option>ASTON MARTIN</option>
+                    <option>AUDI</option>
+                    <option>BENTLEY</option>
+                    <option>BMW</option>
+                    <option>CITROEN</option>
+                    <option>DACIA</option>
+                    <option>FERRARI</option>
+                    <option>FIAT</option>
+                    <option>FORD</option>
+                    <option>HONDA</option>
+                    <option>HYUNDAY</option>
+                    <option>JAGUAR</option>
+                    <option>JEEP</option>
+                    <option>KIA</option>
+                    <option>LAMBORGHINI</option>
+                    <option>MAZDA</option>
+                    <option>MERCEDES</option>
+                    <option>MITSUBISHI</option>
+                    <option>NISSAN</option>
+                    <option>OPEL</option>
+                    <option>PEUGEOT</option>
+                    <option>PORSCHE</option>
+                    <option>RENAULT</option>
+                    <option>SEAT</option>
+                    <option>SKODA</option>
+                    <option>SUZUKI</option>
+                    <option>TESLA</option>
+                    <option>TOYOTA</option>
+                    <option>VOLKSWAGEN</option>
+                    <option>VOLVO</option>
+                  </select>
+                </span>
+                <div class="form-group">
+                  <label for="year"></label>
+                  <span class="custom-dropdown custom-dropdown--white">
+                    <select class="custom-dropdown__select custom-dropdown__select--white" formControlName="year"
+                      [ngClass]="{'is-invalid': submitted && f.year.errors}">
+                      <option selected disabled>Année</option>
+                      <option>2000</option>
+                      <option>2001</option>
+                      <option>2002</option>
+                      <option>2003</option>
+                      <option>2004</option>
+                      <option>2005</option>
+                      <option>2006</option>
+                      <option>2007</option>
+                      <option>2008</option>
+                      <option>2009</option>
+                      <option>2010</option>
+                      <option>2011</option>
+                      <option>2012</option>
+                      <option>2013</option>
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                      <option>2018</option>
+                      <option>2019</option>
+                      <option>2020</option>
+                    </select>
+                  </span>
+                </div>
+                <div class="col-xs-6">
+                  
+                  <label for="immatriculation">
+                  </label>
+                  <h4>Immatriculation</h4>
+                  <input type="text" formControlName="immatriculation" class="form-control" 
+                   placeholder="{{user.immatriculation}}" [ngClass]="{'is-invalid': submitted && f.immatriculation.errors}" >
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <br>
+                <button type="submit"><i class="glyphicon glyphicon-ok-sign"></i>
+                  Sauvegarder</button>
+              </div>
+            </div>
+            
+          </form>
+
+          <hr>
+
+        </div>
+
+
+      </div>
+      <!--/col-9-->
+    </div>
+    <!--/row-->
+  </div>
+</div>

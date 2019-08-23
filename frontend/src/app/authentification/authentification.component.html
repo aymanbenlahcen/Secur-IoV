@@ -1,0 +1,38 @@
+<div class="container">
+  <h1 id="title">Formulaire d'inscription</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #userForm="ngForm">
+
+    <div class="form-group">
+      <label for="id"></label>
+      <div class="md-form">
+        <i class="fas fa-at prefix"></i>
+        <input mdbInput mdbValidate type="text" formControlName="id" id="form3" class="form-control"
+          [ngClass]="{'is-invalid': submitted && f.id.errors}">
+        <label for="form3">Identifiant</label>
+      </div>
+      <div *ngIf="submitted && f.id.errors" class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="pseudo"></label>
+      <div class="md-form">
+        <i class="fas fa-envelope prefix"></i>
+        <input mdbInput mdbValidate type="text" formControlName="pseudo" id="form2" class="form-control"
+        [ngClass]="{'is-invalid': submitted && f.pseudo.errors}">
+        <label for="form2">Pseudo</label>
+      </div>
+      <div *ngIf="submitted && f.pseudo.errors" class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="password"></label>
+      <div class="md-form">
+        <i class="fa fa-lock prefix"></i>
+        <input mdbInput mdbValidate formControlName="passwordFormEx" formControlName="password" maxLength="25"
+          type="password" [ngClass]="{'is-invalid': submitted && f.password.errors}" class="form-control" id="form10">
+        <label for="form10">Mot de passe</label>
+      </div>
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback"></div>
+    </div>
+    <button mdbBtn type="button" color="primary" type="submit" rounded="true" outline="true"
+      mdbWavesEffect>S'inscrire</button>
+  </form>
+</div>

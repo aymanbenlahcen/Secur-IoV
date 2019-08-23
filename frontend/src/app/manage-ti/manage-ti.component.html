@@ -1,0 +1,56 @@
+<app-admin></app-admin>
+
+<!-- Table  -->
+<div style="margin-left:22%">
+  <table class="table">
+    <!-- Table head -->
+    <thead>
+      <tr>
+        <th>
+          <mdb-icon fas icon="user" class="mr-2"></mdb-icon>
+          Pseudo
+        </th>
+        <th>
+          <mdb-icon fas icon="fingerprint" class="mr-2 blue-text" aria-hidden="true"></mdb-icon>
+          ID Blockchain
+        </th>
+        <th>
+          <mdb-icon fas icon="exclamation-circle" class="red-text mr-2  " aria-hidden="true"></mdb-icon>
+          Réclamations
+        </th>
+        <th>
+          <mdb-icon far icon="check-circle" class="green-text pr-3" aria-hidden="true"></mdb-icon>
+          TI
+        </th>
+        <th>
+          <mdb-icon fas icon="angle-up"></mdb-icon>
+          <mdb-icon fas icon="angle-down"></mdb-icon>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <!-- Table head -->
+
+    <!-- Table body -->
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{user.name}}</th>
+        <td>
+          {{user.account}}
+        </td>
+        <td>
+          --
+        </td>
+        <td>
+          {{user.trustIndex}}
+        </td>
+        <td>
+          <button mdbBtn color="green" rounded="true" size="sm" type="button" class="m-0" style="margin: auto" (click)="increaseTrustIndex(user.account)" mdbWavesEffect>+</button>
+          <button mdbBtn color="red" rounded="true" size="sm" type="button" class="m-0" style="margin: auto" (click)="decreaseTrustIndex(user.account)" mdbWavesEffect>-</button>
+        </td>
+      </tr>
+    </tbody>
+    <!-- Table body -->
+  </table>
+  <!-- Table  -->
+</div>

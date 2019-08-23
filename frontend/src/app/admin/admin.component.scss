@@ -1,0 +1,25 @@
+.w3-sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px) {
+  .w3-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .w3-sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .w3-sidebar a {
+    text-align: center;
+    float: none;
+  }
+
+}
